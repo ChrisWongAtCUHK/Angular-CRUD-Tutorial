@@ -4,3 +4,5 @@
 2. [Part 2 - Reading data in angular](https://www.youtube.com/watch?v=tPySwBVmGvg)
 3. [Part 3 - Angular routing and navigation](https://www.youtube.com/watch?v=pcOaAU_iaD4)
 4. [Part 4 - Angular base href](https://www.youtube.com/watch?v=Std1QJpMEiE)
+5. [Part 5 - Angular forms tutorial](http://csharp-video-tutorials.blogspot.com/2017/12/angular-forms-tutorial.html)
+6. [Part 6 - Bootstrap radio buttons in Angular](http://csharp-video-tutorials.blogspot.com/2017/12/bootstrap-radio-buttons-in-angular.html)
