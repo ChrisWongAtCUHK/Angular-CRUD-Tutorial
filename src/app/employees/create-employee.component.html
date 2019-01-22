@@ -59,6 +59,17 @@
         </div>
       </div>
 
+      <div class="form-group">
+        <label for="department">Department</label>
+        <select id="department" name="department"
+                [(ngModel)]="department" class="form-control">
+          <option value="1">Help Desk</option>
+          <option value="2">HR</option>
+          <option value="3">IT</option>
+          <option value="4">Paroll</option>
+        </select>
+      </div>
+
     </div>
     <div class="panel-footer">
       <button class="btn btn-primary" type="submit">Save</button>
