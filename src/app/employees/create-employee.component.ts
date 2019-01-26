@@ -7,6 +7,14 @@ import { Department } from '../models/department.model';
   styleUrls: ['./create-employee.component.css']
 })
 export class CreateEmployeeComponent implements OnInit {
+  fullName: string;
+  email: string;
+  phoneNumber: string;
+  contactPreference: string;
+  gender: string;
+  isActive: boolean;
+  department: Department;
+  dateOfBirth: string;
   departments: Department[] = [
     { id: 1, name: 'Help Desk' },
     { id: 2, name: 'HR' },
