@@ -2,11 +2,19 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Department } from '../models/department.model';
 
+// Import BsDatepickerConfig type. This is the Config object for datepicker. Using this
+// config object we can set minDate, maxDate, whether to show/hide week numbers and
+// change the color theme using the containerClass property.
+import { BsDatepickerConfig } from 'ngx-bootstrap/datepicker';
+
 @Component({
   templateUrl: './create-employee.component.html',
   styleUrls: ['./create-employee.component.css']
 })
 export class CreateEmployeeComponent implements OnInit {
+  // create a property of type Partial<BsDatepickerConfig>
+  datePickerConfig: Partial<BsDatepickerConfig>;
+
   fullName: string;
   email: string;
   phoneNumber: string;
@@ -22,7 +30,9 @@ export class CreateEmployeeComponent implements OnInit {
     { id: 4, name: 'Payroll' }
   ];
 
-  constructor() { }
+  constructor() {
+    this.datePickerConfig = Object.assign({}, { containerClass: 'theme-dark-blue' });
+  }
 
   ngOnInit() {
   }
