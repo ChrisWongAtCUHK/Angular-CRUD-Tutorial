@@ -1,4 +1,4 @@
-<form #employeeForm="ngForm" (ngSubmit)="saveEmployee(employeeForm)">
+<form #employeeForm="ngForm" (ngSubmit)="saveEmployee(employeeForm)" ngNativeValidate>
   <div class="panel panel-primary">
     <div class="panel-heading">
       <h3 class="panel-title">Create Employee</h3>
@@ -8,7 +8,7 @@
       <div class="form-group">
         <label for="fullName">Full Name</label>
         <input id="fullName" type="text" class="form-control"
-               name="fullName" [(ngModel)]="fullName">
+               name="fullName" [(ngModel)]="fullName" required>
       </div>
 
       <div class="form-group">

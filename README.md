@@ -13,3 +13,4 @@
 11. [Part 11 - Angular datepicker tutorial](http://csharp-video-tutorials.blogspot.com/2018/01/angular-datepicker-tutorial.html)
 12. [Part 12 - Customise ngx-bootstrap datepicker](http://csharp-video-tutorials.blogspot.com/2018/01/angular-ngif-directive.html)
 13. [Part 13 - Angular ngif directive](http://csharp-video-tutorials.blogspot.com/2018/01/angular-ngif-directive.html)
+14. [Part 14 - Angular disable browser validation](http://csharp-video-tutorials.blogspot.com/2018/01/angular-disable-browser-validation.html)
