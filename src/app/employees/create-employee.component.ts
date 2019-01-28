@@ -31,7 +31,11 @@ export class CreateEmployeeComponent implements OnInit {
   ];
 
   constructor() {
-    this.datePickerConfig = Object.assign({}, { containerClass: 'theme-dark-blue' });
+    this.datePickerConfig = Object.assign({},
+      {
+        containerClass: 'theme-dark-blue',
+        showWeekNumbers: false
+      });
   }
 
   ngOnInit() {
