@@ -29,15 +29,13 @@ export class CreateEmployeeComponent implements OnInit {
     { id: 3, name: 'IT' },
     { id: 4, name: 'Payroll' }
   ];
+  previewPhoto = false;
 
   constructor() {
     this.datePickerConfig = Object.assign({},
       {
         containerClass: 'theme-dark-blue',
-        showWeekNumbers: false,
-        minDate: new Date(2018, 0, 1),
-        maxDate: new Date(2018, 11, 31),
-        dateInputFormat: 'DD/MM/YYYY'
+        showWeekNumbers: false
       });
   }
 
@@ -46,5 +44,9 @@ export class CreateEmployeeComponent implements OnInit {
 
   saveEmployee(employeeForm: NgForm): void {
     console.log(employeeForm.value);
+  }
+
+  togglePhotoPreview() {
+    this.previewPhoto = !this.previewPhoto;
   }
 }

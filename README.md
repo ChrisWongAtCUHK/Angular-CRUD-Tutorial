@@ -12,3 +12,4 @@
 10. [Part 10 - Angular select options from array](http://csharp-video-tutorials.blogspot.com/2018/01/angular-select-options-from-array.html)
 11. [Part 11 - Angular datepicker tutorial](http://csharp-video-tutorials.blogspot.com/2018/01/angular-datepicker-tutorial.html)
 12. [Part 12 - Customise ngx-bootstrap datepicker](http://csharp-video-tutorials.blogspot.com/2018/01/angular-ngif-directive.html)
+13. [Part 13 - Angular ngif directive](http://csharp-video-tutorials.blogspot.com/2018/01/angular-ngif-directive.html)

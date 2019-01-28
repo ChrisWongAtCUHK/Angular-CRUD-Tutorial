@@ -76,6 +76,22 @@
                 bsDatepicker [bsConfig]="datePickerConfig" class="form-control" />
       </div>
 
+      <div class="form-group">
+        <label for="photoPath">Photo Path</label>
+        <input id="photoPath" type="text" class="form-control"
+                name="photoPath" [(ngModel)]="photoPath">
+      </div>
+
+      <div class="form-group">
+        <img [src]="photoPath" height="200" width="200" *ngIf="previewPhoto"/>
+      </div>
+
+      <div class="form-group">
+        <button type="button" (click)="togglePhotoPreview()" class="btn btn-primary">
+          {{previewPhoto ? "Hide " : "Show " }} Preview
+        </button>
+      </div>
+
     </div>
     <div class="panel-footer">
       <button class="btn btn-primary" type="submit">Save</button>
