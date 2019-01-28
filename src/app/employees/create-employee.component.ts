@@ -34,7 +34,10 @@ export class CreateEmployeeComponent implements OnInit {
     this.datePickerConfig = Object.assign({},
       {
         containerClass: 'theme-dark-blue',
-        showWeekNumbers: false
+        showWeekNumbers: false,
+        minDate: new Date(2018, 0, 1),
+        maxDate: new Date(2018, 11, 31),
+        dateInputFormat: 'DD/MM/YYYY'
       });
   }
 

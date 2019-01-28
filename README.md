@@ -10,3 +10,5 @@
 8. [Part 8 - Bootstrap checkbox in angular](http://csharp-video-tutorials.blogspot.com/2018/01/bootstrap-checkbox-in-angular.html)
 9. [Part 9 - Angular bootstrap select list](http://csharp-video-tutorials.blogspot.com/2018/01/angular-bootstrap-select-list.html)
 10. [Part 10 - Angular select options from array](http://csharp-video-tutorials.blogspot.com/2018/01/angular-select-options-from-array.html)
+11. [Part 11 - Angular datepicker tutorial](http://csharp-video-tutorials.blogspot.com/2018/01/angular-datepicker-tutorial.html)
+12. [Part 12 - Customise ngx-bootstrap datepicker](http://csharp-video-tutorials.blogspot.com/2018/01/angular-ngif-directive.html)
