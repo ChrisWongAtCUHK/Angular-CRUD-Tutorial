@@ -30,6 +30,7 @@ export class CreateEmployeeComponent implements OnInit {
     { id: 4, name: 'Payroll' }
   ];
   previewPhoto = false;
+  photoPath: string;
 
   constructor() {
     this.datePickerConfig = Object.assign({},
