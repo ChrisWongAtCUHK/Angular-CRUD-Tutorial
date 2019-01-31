@@ -6,6 +6,7 @@ import { Department } from '../models/department.model';
 // config object we can set minDate, maxDate, whether to show/hide week numbers and
 // change the color theme using the containerClass property.
 import { BsDatepickerConfig } from 'ngx-bootstrap/datepicker';
+import { Employee } from '../models/employee.model';
 
 @Component({
   templateUrl: './create-employee.component.html',
@@ -15,7 +16,7 @@ export class CreateEmployeeComponent implements OnInit {
   // create a property of type Partial<BsDatepickerConfig>
   datePickerConfig: Partial<BsDatepickerConfig>;
 
-  fullName: string;
+  name: string;
   email: string;
   phoneNumber: string;
   contactPreference: string;
@@ -31,6 +32,18 @@ export class CreateEmployeeComponent implements OnInit {
   ];
   previewPhoto = false;
   photoPath: string;
+  employee: Employee = {
+    id: null,
+    name: null,
+    gender: null,
+    contactPreference: null,
+    phoneNumber: null,
+    email: null,
+    dateOfBirth: null,
+    department: null,
+    isActive: null,
+    photoPath: null
+  };
 
   constructor() {
     this.datePickerConfig = Object.assign({},
