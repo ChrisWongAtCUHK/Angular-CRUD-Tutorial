@@ -17,3 +17,4 @@
 15. [Part 15 - Angular form validation](http://csharp-video-tutorials.blogspot.com/2018/01/angular-form-validation.html)
 16. [Part 16 - Displaying angular form validation error messages](http://csharp-video-tutorials.blogspot.com/2018/01/displaying-angular-form-validation.html)
 17. [Part 17 - Model binding in angular template driven forms](http://csharp-video-tutorials.blogspot.com/2018/02/model-binding-in-angular-template.html)
+18. [Part 18 - Angular email validation example](http://csharp-video-tutorials.blogspot.com/2018/02/angular-email-validation-example.html)
