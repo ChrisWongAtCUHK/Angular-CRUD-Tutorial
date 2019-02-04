@@ -22,3 +22,4 @@
 20. [Part 20 - Angular radio button validation](http://csharp-video-tutorials.blogspot.com/2018/02/angular-radio-button-validation.html)
 21. [Part 21 - Add required attribute dynamically in angular](http://csharp-video-tutorials.blogspot.com/2018/02/add-required-attribute-dynamically-in.html)
 22. [Part 22 - Angular checkbox validation](http://csharp-video-tutorials.blogspot.com/2018/02/angular-select-list-validation.html)
+23. [Part 23 - Angular select list validation](http://csharp-video-tutorials.blogspot.com/2018/02/angular-select-list-validation.html)
