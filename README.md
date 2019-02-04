@@ -19,3 +19,5 @@
 17. [Part 17 - Model binding in angular template driven forms](http://csharp-video-tutorials.blogspot.com/2018/02/model-binding-in-angular-template.html)
 18. [Part 18 - Angular email validation example](http://csharp-video-tutorials.blogspot.com/2018/02/angular-email-validation-example.html)
 19. [Part 19 - Angular regular expression validation](http://csharp-video-tutorials.blogspot.com/2018/02/angular-radio-button-validation.html)
+20. [Part 20 - Angular radio button validation](http://csharp-video-tutorials.blogspot.com/2018/02/angular-radio-button-validation.html)
+21. [Part 21 - Add required attribute dynamically in angular](http://csharp-video-tutorials.blogspot.com/2018/02/add-required-attribute-dynamically-in.html)
