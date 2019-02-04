@@ -23,3 +23,4 @@
 21. [Part 21 - Add required attribute dynamically in angular](http://csharp-video-tutorials.blogspot.com/2018/02/add-required-attribute-dynamically-in.html)
 22. [Part 22 - Angular checkbox validation](http://csharp-video-tutorials.blogspot.com/2018/02/angular-select-list-validation.html)
 23. [Part 23 - Angular select list validation](http://csharp-video-tutorials.blogspot.com/2018/02/angular-select-list-validation.html)
+24. [Part 24 - Angular value vs ngValue](http://csharp-video-tutorials.blogspot.com/2018/02/angular-value-vs-ngvalue.html)
