@@ -87,14 +87,14 @@
 
       <div class="form-group" [class.has-error]="department.touched && department.invalid">
         <label for="department" class="control-label">Department</label>
-        <select id="department"  required #department="ngModel"
+        <select id="department" appSelectValidator #department="ngModel"
                 name="department" [(ngModel)]="employee.department" class="form-control">
-          <option disabled [ngValue]="null">Select Department</option>
+          <option disabled value="-1">Select Department</option>
           <option *ngFor="let dept of departments" [ngValue]="dept">
             {{dept.name}}
           </option>
         </select>
-        <span class="help-block" *ngIf="department.invalid && department.touched">
+        <span class="help-block" *ngIf="department.errors?.defaultSelected && department.touched">
           Department is required
         </span>
       </div>
