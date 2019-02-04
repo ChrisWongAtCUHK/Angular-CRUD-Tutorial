@@ -94,7 +94,7 @@
             {{dept.name}}
           </option>
         </select>
-        <span class="help-block" *ngIf="department.touched && department.invalid">
+        <span class="help-block" *ngIf="department.invalid && department.touched">
           Department is required
         </span>
       </div>
