@@ -73,12 +73,16 @@
         </span>
       </div>
 
-      <div class="form-group">
+      <div class="form-group"  [class.has-error]="isActive.invalid && isActive.touched">
         <div class="form-control">
-          <label class="checkbox-inline">
-            <input type="checkbox" name="isActive" [(ngModel)]="employee.isActive">Is Active
+          <label class="checkbox-inline control-label">
+            <input type="checkbox" [required]="employee.isActive==null"  name="isActive"
+            #isActive="ngModel" [(ngModel)]="employee.isActive">Is Active
           </label>
         </div>
+        <span class="help-block" *ngIf="isActive.errors?.required && isActive.touched">
+          Is Active is required
+        </span>
       </div>
 
       <div class="form-group">
