@@ -87,9 +87,9 @@
 
       <div class="form-group" [class.has-error]="department.touched && department.invalid">
         <label for="department" class="control-label">Department</label>
-        <select id="department" appSelectValidator #department="ngModel"
+        <select id="department" appSelectValidator="-101" #department="ngModel"
                 name="department" [(ngModel)]="employee.department" class="form-control">
-          <option disabled value="-1">Select Department</option>
+          <option disabled value="-101">Select Department</option>
           <option *ngFor="let dept of departments" [ngValue]="dept">
             {{dept.name}}
           </option>

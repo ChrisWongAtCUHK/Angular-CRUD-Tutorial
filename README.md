@@ -25,3 +25,4 @@
 23. [Part 23 - Angular select list validation](http://csharp-video-tutorials.blogspot.com/2018/02/angular-select-list-validation.html)
 24. [Part 24 - Angular value vs ngValue](http://csharp-video-tutorials.blogspot.com/2018/02/angular-value-vs-ngvalue.html)
 25. [Part 25 - Angular custom validator example template driven forms](http://csharp-video-tutorials.blogspot.com/2018/02/angular-custom-validator-example_27.html)
+26. [Part 26 - Angular select list required custom validator](http://csharp-video-tutorials.blogspot.com/2018/02/angular-select-list-required-custom.html)
