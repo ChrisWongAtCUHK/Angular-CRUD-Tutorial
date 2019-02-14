@@ -26,3 +26,6 @@
 24. [Part 24 - Angular value vs ngValue](http://csharp-video-tutorials.blogspot.com/2018/02/angular-value-vs-ngvalue.html)
 25. [Part 25 - Angular custom validator example template driven forms](http://csharp-video-tutorials.blogspot.com/2018/02/angular-custom-validator-example_27.html)
 26. [Part 26 - Angular select list required custom validator](http://csharp-video-tutorials.blogspot.com/2018/02/angular-select-list-required-custom.html)
+27. [Part 27 - Angular password and confirm password validation](http://csharp-video-tutorials.blogspot.com/2018/03/angular-password-and-confirm-password.html)
+28. [Part 28 - Angular trigger validation manually](http://csharp-video-tutorials.blogspot.com/2018/03/angular-trigger-validation-manually.html)
+29. [Part 29 - Angular form group validation](http://csharp-video-tutorials.blogspot.com/2018/03/angular-form-group-validation.html)
