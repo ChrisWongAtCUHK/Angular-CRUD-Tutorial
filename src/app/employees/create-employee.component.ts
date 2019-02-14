@@ -7,6 +7,8 @@ import { Department } from '../models/department.model';
 // change the color theme using the containerClass property.
 import { BsDatepickerConfig } from 'ngx-bootstrap/datepicker';
 import { Employee } from '../models/employee.model';
+import { EmployeeService } from './employee.service';
+import { Router } from '@angular/router';
 
 @Component({
   templateUrl: './create-employee.component.html',
@@ -45,7 +47,7 @@ export class CreateEmployeeComponent implements OnInit {
     photoPath: null
   };
 
-  constructor() {
+  constructor(private _employeeService: EmployeeService, private _router: Router) {
     this.datePickerConfig = Object.assign({},
       {
         containerClass: 'theme-dark-blue',
@@ -57,7 +59,8 @@ export class CreateEmployeeComponent implements OnInit {
   }
 
   saveEmployee(employeeForm: NgForm): void {
-    console.log(employeeForm.value);
+    this._employeeService.save(this.employee);
+    this._router.navigate(['list']);
   }
 
   togglePhotoPreview() {

@@ -30,3 +30,4 @@
 28. [Part 28 - Angular trigger validation manually](http://csharp-video-tutorials.blogspot.com/2018/03/angular-trigger-validation-manually.html)
 29. [Part 29 - Angular form group validation](http://csharp-video-tutorials.blogspot.com/2018/03/angular-form-group-validation.html)
 30. [Part 30 - Angular 5 services tutorial](http://csharp-video-tutorials.blogspot.com/2018/03/angular-5-services-tutorial.html)
+31. [Part 31 - Create operation in angular](http://csharp-video-tutorials.blogspot.com/2018/03/create-operation-in-angular.html)
