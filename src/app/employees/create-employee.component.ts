@@ -59,6 +59,7 @@ export class CreateEmployeeComponent implements OnInit {
   }
 
   saveEmployee(employeeForm: NgForm): void {
+    this.employee.department = JSON.parse(JSON.stringify(this.employee.department)).name;
     this._employeeService.save(this.employee);
     this._router.navigate(['list']);
   }
