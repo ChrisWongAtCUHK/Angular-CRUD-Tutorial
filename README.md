@@ -31,3 +31,4 @@
 29. [Part 29 - Angular form group validation](http://csharp-video-tutorials.blogspot.com/2018/03/angular-form-group-validation.html)
 30. [Part 30 - Angular 5 services tutorial](http://csharp-video-tutorials.blogspot.com/2018/03/angular-5-services-tutorial.html)
 31. [Part 31 - Create operation in angular](http://csharp-video-tutorials.blogspot.com/2018/03/create-operation-in-angular.html)
+32. [Part 32 - Angular switch case example](http://csharp-video-tutorials.blogspot.com/2018/03/angular-switch-case-example.html)
