@@ -34,3 +34,4 @@
 32. [Part 32 - Angular switch case example](http://csharp-video-tutorials.blogspot.com/2018/03/angular-switch-case-example.html)
 33. [Part 33 - Pass data from parent to child component in angular](http://csharp-video-tutorials.blogspot.com/2018/03/pass-data-from-parent-to-child.html)
 34. [Part 34 - Angular component input property change detection](http://csharp-video-tutorials.blogspot.com/2018/03/angular-component-input-property-change.html)
+35. [Part 35 - Angular input change detection using property setter](http://csharp-video-tutorials.blogspot.com/2018/03/angular-property-setter-vs-ngonchanges.html)
