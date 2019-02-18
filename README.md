@@ -33,3 +33,4 @@
 31. [Part 31 - Create operation in angular](http://csharp-video-tutorials.blogspot.com/2018/03/create-operation-in-angular.html)
 32. [Part 32 - Angular switch case example](http://csharp-video-tutorials.blogspot.com/2018/03/angular-switch-case-example.html)
 33. [Part 33 - Pass data from parent to child component in angular](http://csharp-video-tutorials.blogspot.com/2018/03/pass-data-from-parent-to-child.html)
+34. [Part 34 - Angular component input property change detection](http://csharp-video-tutorials.blogspot.com/2018/03/angular-component-input-property-change.html)

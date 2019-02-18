@@ -9,6 +9,8 @@ import { EmployeeService } from './employee.service';
 })
 export class ListEmployeesComponent implements OnInit {
   employees: Employee[];
+  employeeToDisplay: Employee;
+  private arrayIndex = 1;
 
   // Inject EmployeeService using the constructor
   // The private variable _employeeService which points to
@@ -20,5 +22,16 @@ export class ListEmployeesComponent implements OnInit {
   // using the private variable _employeeService
   ngOnInit() {
     this.employees = this._employeeService.getEmployees();
+    this.employeeToDisplay = this.employees[0];
+  }
+
+  nextEmployee(): void {
+    if (this.employeeToDisplay.id < this.employees.length) {
+      this.employeeToDisplay = this.employees[this.arrayIndex];
+      this.arrayIndex++;
+    } else {
+      this.employeeToDisplay = this.employees[0];
+      this.arrayIndex = 1;
+    }
   }
 }
