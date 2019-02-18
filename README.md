@@ -37,3 +37,4 @@
 35. [Part 35 - Angular input change detection using property setter](http://csharp-video-tutorials.blogspot.com/2018/03/angular-property-setter-vs-ngonchanges.html)
 36. [Part 36 - Angular property setter vs ngonchanges](http://csharp-video-tutorials.blogspot.com/2018/03/angular-property-setter-vs-ngonchanges.html)
 37. [Part 37 - Angular component communication](http://csharp-video-tutorials.blogspot.com/2018/04/angular-component-communication.html)
+38. [Part 38 - Call child component methods and properties](http://csharp-video-tutorials.blogspot.com/2018/04/call-child-component-methods-and.html)
