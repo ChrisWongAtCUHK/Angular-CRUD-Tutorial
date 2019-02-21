@@ -40,3 +40,4 @@
 38. [Part 38 - Call child component methods and properties](http://csharp-video-tutorials.blogspot.com/2018/04/call-child-component-methods-and.html)
 39. [Part 39 - Angular route guards](http://csharp-video-tutorials.blogspot.com/2018/04/angular-route-guards.html)
 40. [Part 40 - Angular route params](http://csharp-video-tutorials.blogspot.com/2018/04/angular-route-params.html)
+41. [Part 41 - Angular read route parameters](http://csharp-video-tutorials.blogspot.com/2018/04/angular-read-route-parameters.html)
