@@ -8,6 +8,7 @@ import { Employee } from '../models/employee.model';
 })
 export class DisplayEmployeeComponent {
   @Input() employee: Employee;
+  @Input() selectedEmployeeId: number;
   getNameAndGender(): string {
     return this.employee.name + ' ' + this.employee.gender;
   }
