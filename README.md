@@ -43,3 +43,4 @@
 41. [Part 41 - Angular read route parameters](http://csharp-video-tutorials.blogspot.com/2018/04/angular-read-route-parameters.html)
 42. [Part 42 - Subscribe to angular route parameter changes](http://csharp-video-tutorials.blogspot.com/2018/04/subscribe-to-angular-route-parameter.html)
 43. [Part 43 - Angular optional route parameters](http://csharp-video-tutorials.blogspot.com/2018/04/angular-optional-route-parameters.html)
+44. [Part 44 - Angular required route parameter vs optional route parameter](http://csharp-video-tutorials.blogspot.com/2018/04/angular-required-route-parameter-vs.html)
