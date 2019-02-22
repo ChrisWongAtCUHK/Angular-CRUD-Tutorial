@@ -46,7 +46,9 @@ export class CreateEmployeeComponent implements OnInit {
     dateOfBirth: null,
     department: '-101',
     isActive: null,
-    photoPath: null
+    photoPath: null,
+    password: null,
+    confirmPassword: null
   };
 
   constructor(private _employeeService: EmployeeService, private _router: Router) {
