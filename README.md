@@ -46,3 +46,4 @@
 44. [Part 44 - Angular required route parameter vs optional route parameter](http://csharp-video-tutorials.blogspot.com/2018/04/angular-required-route-parameter-vs.html)
 45. [Part 45 - Angular form reset](http://csharp-video-tutorials.blogspot.com/2018/04/angular-form-reset.html)
 46. [Part 46 - Javascript objects and reference variables](http://csharp-video-tutorials.blogspot.com/2018/05/javascript-objects-and-reference.html)
+47. [Part 47 - Filter pipe in angular](http://csharp-video-tutorials.blogspot.com/2018/05/filter-pipe-in-angular.html)
