@@ -50,3 +50,4 @@
 48. [Part 48 - Angular pure pipe](http://csharp-video-tutorials.blogspot.com/2018/05/angular-pure-pipe.html)
 49. [Part 49 - Angular impure pipe](http://csharp-video-tutorials.blogspot.com/2018/05/data-filter-in-angular-component.html)
 50. [Part 50 - Data filter in angular component](http://csharp-video-tutorials.blogspot.com/2018/05/data-filter-in-angular-component.html)
+51. [Part 51 - Angular query params](http://csharp-video-tutorials.blogspot.com/2018/05/angular-query-params.html)
