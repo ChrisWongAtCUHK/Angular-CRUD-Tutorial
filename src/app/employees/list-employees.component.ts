@@ -42,6 +42,11 @@ export class ListEmployeesComponent implements OnInit {
     this.employees = this._employeeService.getEmployees();
     this.selectedEmployeeId = +this._route.snapshot.paramMap.get('id');
     this.filteredEmployees = this.employees;
+    if (this._route.snapshot.queryParamMap.has('searchTerm')) {
+      this.searchTerm = this._route.snapshot.queryParamMap.get('searchTerm');
+    } else {
+      this.filteredEmployees = this.employees;
+    }
   }
 
   onClick(employeeId: number) {
