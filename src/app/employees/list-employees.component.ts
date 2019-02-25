@@ -36,17 +36,19 @@ export class ListEmployeesComponent implements OnInit {
   // throughout the class and can be accessed using this keyword
   constructor(private _employeeService: EmployeeService, private _router: Router, private _route: ActivatedRoute) { }
 
-  // Call the getEmployees() service method of EmployeeService
-  // using the private variable _employeeService
   ngOnInit() {
-    this.employees = this._employeeService.getEmployees();
     this.selectedEmployeeId = +this._route.snapshot.paramMap.get('id');
-    this.filteredEmployees = this.employees;
-    if (this._route.snapshot.queryParamMap.has('searchTerm')) {
-      this.searchTerm = this._route.snapshot.queryParamMap.get('searchTerm');
-    } else {
-      this.filteredEmployees = this.employees;
-    }
+    this._employeeService.getEmployees().subscribe((empList) => {
+      this.employees = empList;
+      this._route.queryParamMap.subscribe(params => {
+        if (params.has('searchTerm')) {
+          this.searchTerm = params.get('searchTerm');
+        } else {
+          this.filteredEmployees = this.employees;
+          console.log(this.employees.length);
+        }
+      });
+    });
   }
 
   onClick(employeeId: number) {

@@ -52,3 +52,16 @@
 50. [Part 50 - Data filter in angular component](http://csharp-video-tutorials.blogspot.com/2018/05/data-filter-in-angular-component.html)
 51. [Part 51 - Angular query params](http://csharp-video-tutorials.blogspot.com/2018/05/angular-query-params.html)
 52. [Part 52 - Angular read query string parameters](http://csharp-video-tutorials.blogspot.com/2018/05/angular-read-query-string-parameters.html)
+53. [Part 53 - Create observable from array](http://csharp-video-tutorials.blogspot.com/2018/05/create-observable-from-array.html)
+    * [can't Resolve rxjs](https://stackoverflow.com/questions/48280400/cant-resolve-rxjs)
+```cmd
+npm install --save rxjs-compat
+```
+    * [How can I create an observable with a delayAsk Question](https://stackoverflow.com/questions/42413969/how-can-i-create-an-observable-with-a-delay)
+```angular
+import { Observable } from 'rxjs';
+import 'rxjs/add/observable/of';
+import { delay } from 'rxjs/internal/operators';
+...
+        return Observable.of(this.listEmployees).pipe(delay(2000));
+```
