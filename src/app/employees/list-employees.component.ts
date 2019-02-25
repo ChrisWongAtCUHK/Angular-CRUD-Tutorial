@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Employee } from '../models/employee.model';
-// Import EmployeeService
-import { EmployeeService } from './employee.service';
 import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -34,21 +32,18 @@ export class ListEmployeesComponent implements OnInit {
   // The private variable _employeeService which points to
   // EmployeeService singelton instance is then available
   // throughout the class and can be accessed using this keyword
-  constructor(private _employeeService: EmployeeService, private _router: Router, private _route: ActivatedRoute) { }
+  constructor(private _router: Router, private _route: ActivatedRoute) { }
 
   ngOnInit() {
     this.selectedEmployeeId = +this._route.snapshot.paramMap.get('id');
-    this._employeeService.getEmployees().subscribe((empList) => {
-      this.employees = empList;
-      this._route.queryParamMap.subscribe(params => {
-        if (params.has('searchTerm')) {
-          this.searchTerm = params.get('searchTerm');
-        } else {
-          this.filteredEmployees = this.employees;
-          console.log(this.employees.length);
-        }
-      });
-    });
+
+    this.employees = this._route.snapshot.data['employeeList'];
+
+    if (this._route.snapshot.queryParamMap.has('searchTerm')) {
+      this.searchTerm = this._route.snapshot.queryParamMap.get('searchTerm');
+    } else {
+      this.filteredEmployees = this.employees;
+    }
   }
 
   onClick(employeeId: number) {

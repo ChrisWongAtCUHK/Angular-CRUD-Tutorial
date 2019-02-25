@@ -65,3 +65,4 @@ import { delay } from 'rxjs/internal/operators';
 ...
         return Observable.of(this.listEmployees).pipe(delay(2000));
 ```
+54. [Part 54 - Angular resolve guard](http://csharp-video-tutorials.blogspot.com/2018/05/angular-resolve-guard.html)
