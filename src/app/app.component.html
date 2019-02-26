@@ -13,4 +13,6 @@
       </ul>
   </nav>
   <router-outlet></router-outlet>
+  <!-- Bind to showLoadingIndicator property in the component class -->
+  <div *ngIf="showLoadingIndicator" class="spinner"></div>
 </div>
