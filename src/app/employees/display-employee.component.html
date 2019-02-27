@@ -7,7 +7,7 @@
     <h3 class="panel-title">{{employee.name}}</h3>
   </div>
   <!-- Render panel-body <div> only if panelExpanded property is true  -->
-  <div class="panel-body" *ngIf="panelExpanded">
+  <div class="panel-body" [hidden]="!panelExpanded">
     <div class="col-xs-10">
 
       <div class="row vertical-align">
@@ -80,7 +80,7 @@
     </div>
   </div>
   <!-- Render panel-footer <div> only if panelExpanded property is true  -->
-  <div class="panel-footer" *ngIf="panelExpanded">
+  <div class="panel-footer" [hidden]="!panelExpanded">
     <button class="btn btn-primary" (click)="viewEmployee()">View</button>
     <button class="btn btn-primary"(click)="editEmployee()">Edit</button>
     <span *ngIf="confirmDelete">
