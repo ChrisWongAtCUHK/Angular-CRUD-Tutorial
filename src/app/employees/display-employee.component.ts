@@ -11,7 +11,7 @@ export class DisplayEmployeeComponent implements OnInit {
   @Input() employee: Employee;
   @Input() searchTerm: string;
 
-  private selectedEmployeeId: number;
+  selectedEmployeeId: number;
   
   constructor(private _route: ActivatedRoute, private _router: Router) { }
 

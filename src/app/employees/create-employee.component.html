@@ -1,7 +1,7 @@
 <form #employeeForm="ngForm" (ngSubmit)="saveEmployee()">
   <div class="panel panel-primary">
     <div class="panel-heading">
-      <h3 class="panel-title">Create Employee</h3>
+      <h3 class="panel-title">{{panelTitle}}</h3>
     </div>
     <div class="panel-body">
 
@@ -90,7 +90,7 @@
         <select id="department" appSelectValidator="-101" #department="ngModel"
                 name="department" [(ngModel)]="employee.department" class="form-control">
           <option disabled value="-101">Select Department</option>
-          <option *ngFor="let dept of departments" [ngValue]="dept">
+          <option *ngFor="let dept of departments" value="{{dept.name}}">
             {{dept.name}}
           </option>
         </select>
