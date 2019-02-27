@@ -11,3 +11,7 @@ button.btn {
   width: 70px;
   margin: 0px 3px; 
 }
+
+.pointerCursor {
+  cursor: pointer;
+}

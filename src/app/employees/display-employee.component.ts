@@ -23,6 +23,8 @@ export class DisplayEmployeeComponent implements OnInit {
   confirmDelete = false;
 
   selectedEmployeeId: number;
+
+  panelExpanded = true;
   
   constructor(private _route: ActivatedRoute, private _router: Router, private _employeeService: EmployeeService) { }
 

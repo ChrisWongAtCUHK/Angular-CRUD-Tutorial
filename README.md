@@ -72,3 +72,4 @@ import { delay } from 'rxjs/internal/operators';
 58. [Part 58 - Passing data between components in angular](http://csharp-video-tutorials.blogspot.com/2018/06/passing-data-between-components-in.html)
 59. [Part 59 - Edit form in angular](http://csharp-video-tutorials.blogspot.com/2018/06/edit-form-in-angular.html)
 60. [Part 60 - Angular delete form](http://csharp-video-tutorials.blogspot.com/2018/06/angular-delete-form.html)
+61. [Part 61 - Angular accordion example](http://csharp-video-tutorials.blogspot.com/2018/06/angular-accordion-example.html)
