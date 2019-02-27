@@ -31,6 +31,9 @@ const appRoutes: Routes = [
     path: 'create', component: CreateEmployeeComponent,  canDeactivate: [CreateEmployeeCanDeactivateGuardService]
   },
   {
+    path: 'edit/:id', component: CreateEmployeeComponent,  canDeactivate: [CreateEmployeeCanDeactivateGuardService]
+  },
+  {
     path: 'employees/:id', 
     component: EmployeeDetailsComponent,
     canActivate: [EmployeeDetailsGuardService]

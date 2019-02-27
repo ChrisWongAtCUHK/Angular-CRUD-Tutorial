@@ -69,3 +69,5 @@ import { delay } from 'rxjs/internal/operators';
 55. [Part 55 - Angular router navigation events](http://csharp-video-tutorials.blogspot.com/2018/05/angular-router-navigation-events.html)
 56. [Part 56 - Angular route loading indicator](http://csharp-video-tutorials.blogspot.com/2018/06/angular-route-loading-indicator.html)
 57. [Part 57 - Angular canactivate guard example](http://csharp-video-tutorials.blogspot.com/2018/06/angular-canactivate-guard-example.html)
+58. [Part 58 - Passing data between components in angular](http://csharp-video-tutorials.blogspot.com/2018/06/passing-data-between-components-in.html)
+59. [Part 59 - Edit form in angular](http://csharp-video-tutorials.blogspot.com/2018/06/edit-form-in-angular.html)
