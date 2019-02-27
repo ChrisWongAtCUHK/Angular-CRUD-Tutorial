@@ -2,11 +2,11 @@ import { Injectable } from '@angular/core';
 import { Employee } from '../models/employee.model';
 
 import { Observable } from 'rxjs';
-import 'rxjs/add/observable/of';
-import { delay } from 'rxjs/internal/operators';
+import { catchError } from 'rxjs/operators';
 
 // Import HttpClient service
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { ErrorObservable } from 'rxjs/observable/ErrorObservable';
 
 // The @Injectable() decorator is used to inject other dependencies
 // into this service. As our service does not have any dependencies
@@ -15,53 +15,13 @@ import { HttpClient } from '@angular/common/http';
 // to always use @Injectable() decorator to ensures consistency
 @Injectable()
 export class EmployeeService {
-    private listEmployees: Employee[] = [
-        {
-            id: 1,
-            name: 'Mark',
-            gender: 'Male',
-            contactPreference: 'Email',
-            email: 'mark@pragimtech.com',
-            dateOfBirth: new Date('10/25/1988'),
-            department: 'IT',
-            isActive: true,
-            photoPath: 'assets/images/mark.png',
-            password: null,
-            confirmPassword: null
-        },
-        {
-            id: 2,
-            name: 'Mary',
-            gender: 'Female',
-            contactPreference: 'Phone',
-            phoneNumber: 2345978640,
-            dateOfBirth: new Date('11/20/1979'),
-            department: 'HR',
-            isActive: true,
-            photoPath: 'assets/images/mary.png',
-            password: null,
-            confirmPassword: null
-        },
-        {
-            id: 3,
-            name: 'John',
-            gender: 'Male',
-            contactPreference: 'Phone',
-            phoneNumber: 5432978640,
-            dateOfBirth: new Date('3/25/1976'),
-            department: 'IT',
-            isActive: false,
-            photoPath: 'assets/images/john.png',
-            password: null,
-            confirmPassword: null
-        },
-    ];
+    private listEmployees: Employee[];
 
     constructor(private httpClient: HttpClient) {
     }
 
     getEmployees(): Observable<Employee[]> {
-        return this.httpClient.get<Employee[]>('http://localhost:3000/employees');
+        return this.httpClient.get<Employee[]>('http://localhost:3000/employees').pipe(catchError(this.handleError));
     }
 
     save(employee: Employee) {
@@ -92,4 +52,14 @@ export class EmployeeService {
             this.listEmployees.splice(i, 1);
         }
     }
+
+    private handleError(errorResponse: HttpErrorResponse) {
+        if (errorResponse.error instanceof ErrorEvent) {
+            console.error('Client Side Error :', errorResponse.error.message);
+        } else {
+            console.error('Server Side Error :', errorResponse);
+        }
+        // return an observable with a meaningful error message to the end user
+        return ErrorObservable.create('There is a problem with the service. We are notified & working on it. Please try again later.');
+    }    
 }

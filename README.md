@@ -81,3 +81,7 @@ json-server --watch db.json
 ```
 64. [Part 64 - Angular client server architecture](http://csharp-video-tutorials.blogspot.com/2018/07/angular-client-server-architecture.html)
 65. [Part 65 - Angular httpclient get example](http://csharp-video-tutorials.blogspot.com/2018/07/angular-httpclient-get-example.html)
+66. [Part 66 - Angular httpclient error handling](http://csharp-video-tutorials.blogspot.com/2018/07/angular-httpclient-error-handling.html)
+```typescript
+return ErrorObservable.create('There is a problem with the service. We are notified & working on it. Please try again later.');
+```
