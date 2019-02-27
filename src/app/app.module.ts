@@ -20,6 +20,7 @@ import { CreateEmployeeCanDeactivateGuardService } from './employees/create-empl
 import { EmployeeDetailsGuardService } from './employees/employee-details-guard.service';
 import { EmployeeDetailsComponent } from './employees/employee-details.component';
 import { PageNotFoundComponent } from './page-not-found.component';
+import { AccordionComponent } from './shared/accordion.component';
 
 const appRoutes: Routes = [
   { 
@@ -51,7 +52,8 @@ const appRoutes: Routes = [
     ConfirmEqualValidatorDirective,
     DisplayEmployeeComponent,
     EmployeeDetailsComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    AccordionComponent
   ],
   imports: [
     BrowserModule,

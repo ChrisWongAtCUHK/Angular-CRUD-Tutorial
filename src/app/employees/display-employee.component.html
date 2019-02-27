@@ -1,4 +1,7 @@
-<div class="panel panel-primary" [class.panel-success]="selectedEmployeeId === employee.id">
+<!-- Pass employee name as the value for title input property. Also set
+     isHidden input propety to false if you want the panel body and footer
+     to be collapsed on the initial page load.-->
+<app-accordion [title]="employee.name" [isHidden]="true" [hasJustViewed]="selectedEmployeeId === employee.id">
   <!-- pointerCursor class changes the cursor style to pointer when hovered over 
           the employee panel title. When clicked on the title, the panelExpanded 
           boolean property is toggled from true to false & vice-versa. We use this 
@@ -6,17 +9,20 @@
   <div class="panel-heading pointerCursor" (click)="panelExpanded = !panelExpanded">
     <h3 class="panel-title">{{employee.name}}</h3>
   </div>
-  <!-- Render panel-body <div> only if panelExpanded property is true  -->
-  <div class="panel-body" [hidden]="!panelExpanded">
+  <!-- Notice myPanelBody css class is present on this <div>. This CCS class is
+  used as the selector on the <ng-content> tag in accordion component. So all this
+  content in this DIV will be projected at the location where we have <ng-content>
+  tag with css class selector .myPanelBody -->
+  <div class="panel-body myPanelBody">
     <div class="col-xs-10">
-
+  
       <div class="row vertical-align">
-
+  
         <div class="col-xs-4">
           <img class="imageClass" [src]="employee.photoPath" />
         </div>
         <div class="col-xs-8">
-
+  
           <div class="row">
             <div class="col-xs-6">
               Gender
@@ -73,16 +79,17 @@
               : {{employee.isActive}}
             </div>
           </div>
-
+  
         </div>
-
+  
       </div>
     </div>
   </div>
-  <!-- Render panel-footer <div> only if panelExpanded property is true  -->
-  <div class="panel-footer" [hidden]="!panelExpanded">
+  <!-- The content in the following DIV will be projected at the location
+    where we have <ng-content> tag with css selector .myPanelFooter -->
+  <div class="myPanelFooter">
     <button class="btn btn-primary" (click)="viewEmployee()">View</button>
-    <button class="btn btn-primary"(click)="editEmployee()">Edit</button>
+    <button class="btn btn-primary" (click)="editEmployee()">Edit</button>
     <span *ngIf="confirmDelete">
       <span>Are you sure you want to delete ?</span>
       <button class="btn btn-danger" (click)="deleteEmployee()">Yes</button>
@@ -92,4 +99,4 @@
       <button class="btn btn-danger" (click)="confirmDelete=true">Delete</button>
     </span>
   </div>
-</div>
+</app-accordion>
