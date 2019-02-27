@@ -5,6 +5,8 @@ import { Observable } from 'rxjs';
 import 'rxjs/add/observable/of';
 import { delay } from 'rxjs/internal/operators';
 
+// Import HttpClient service
+import { HttpClient } from '@angular/common/http';
 
 // The @Injectable() decorator is used to inject other dependencies
 // into this service. As our service does not have any dependencies
@@ -55,8 +57,11 @@ export class EmployeeService {
         },
     ];
 
+    constructor(private httpClient: HttpClient) {
+    }
+
     getEmployees(): Observable<Employee[]> {
-        return Observable.of(this.listEmployees).pipe(delay(2000));
+        return this.httpClient.get<Employee[]>('http://localhost:3000/employees');
     }
 
     save(employee: Employee) {

@@ -22,6 +22,8 @@ import { EmployeeDetailsComponent } from './employees/employee-details.component
 import { PageNotFoundComponent } from './page-not-found.component';
 import { AccordionComponent } from './shared/accordion.component';
 
+import { HttpClientModule } from '@angular/common/http';
+
 const appRoutes: Routes = [
   { 
     path: 'list', 
@@ -60,7 +62,8 @@ const appRoutes: Routes = [
     AppRoutingModule,
     RouterModule.forRoot(appRoutes),
     FormsModule,
-    BsDatepickerModule.forRoot()
+    BsDatepickerModule.forRoot(),
+    HttpClientModule
   ],
   providers: [EmployeeService, CreateEmployeeCanDeactivateGuardService, EmployeeListResolverService, EmployeeDetailsGuardService],
   bootstrap: [AppComponent]

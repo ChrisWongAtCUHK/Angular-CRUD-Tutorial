@@ -75,4 +75,9 @@ import { delay } from 'rxjs/internal/operators';
 61. [Part 61 - Angular accordion example](http://csharp-video-tutorials.blogspot.com/2018/06/angular-accordion-example.html)
 62. [Part 62 - Angular content projection](http://csharp-video-tutorials.blogspot.com/2018/06/angular-content-projection.html)
 63. [Part 63 - Online fake REST API](http://csharp-video-tutorials.blogspot.com/2018/07/online-fake-rest-api.html)
+```cmd
+npm install -g json-server 
+json-server --watch db.json
+```
 64. [Part 64 - Angular client server architecture](http://csharp-video-tutorials.blogspot.com/2018/07/angular-client-server-architecture.html)
+65. [Part 65 - Angular httpclient get example](http://csharp-video-tutorials.blogspot.com/2018/07/angular-httpclient-get-example.html)
