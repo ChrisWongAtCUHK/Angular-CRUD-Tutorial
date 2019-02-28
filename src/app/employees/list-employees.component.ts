@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Employee } from '../models/employee.model';
 import { ActivatedRoute } from '@angular/router';
+import { ResolvedEmployeeList } from './resolved-employeelist.model';
 
 @Component({
   templateUrl: './list-employees.component.html',
@@ -13,6 +14,8 @@ export class ListEmployeesComponent implements OnInit {
   // lose the original list and do not have to make a round trip
   // to the web server on every new search
   filteredEmployees: Employee[];
+
+  error: any;
 
   private _searchTerm: string;
 
@@ -33,7 +36,14 @@ export class ListEmployeesComponent implements OnInit {
   // EmployeeService singelton instance is then available
   // throughout the class and can be accessed using this keyword
   constructor(private _route: ActivatedRoute) { 
-    this.employees = this._route.snapshot.data['employeeList'];
+    const resolvedEmployeeList: ResolvedEmployeeList
+                    = this._route.snapshot.data['employeeList'];
+
+    if (resolvedEmployeeList.error == null) {
+      this.employees = resolvedEmployeeList.employeeList;
+    } else {
+      this.error = resolvedEmployeeList.error;
+    }
 
     if (this._route.snapshot.queryParamMap.has('searchTerm')) {
       this.searchTerm = this._route.snapshot.queryParamMap.get('searchTerm');
