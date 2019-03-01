@@ -46,11 +46,9 @@ export class EmployeeService {
             .pipe(catchError(this.handleError));
     }
 
-    deleteEmployee(id: number) {
-        const i = this.listEmployees.findIndex(e => e.id === id);
-        if (i !== -1) {
-            this.listEmployees.splice(i, 1);
-        }
+    deleteEmployee(id: number): Observable<void> {
+        return this.httpClient.delete<void>(`${this.baseUrl}/${id}`)
+            .pipe(catchError(this.handleError));
     }
 
     // When an update is peformed our server side service does not return anything
