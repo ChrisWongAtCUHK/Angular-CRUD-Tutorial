@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 
 // Import HttpClient service
-import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 import { ErrorObservable } from 'rxjs/observable/ErrorObservable';
 
 // The @Injectable() decorator is used to inject other dependencies
@@ -26,16 +26,13 @@ export class EmployeeService {
 
     save(employee: Employee) {
         if (employee.id === null) {
-            // reduce() method reduces the array to a single value. This method executes
-            // the provided function for each element of the array (from left-to-right)
-            // When we implement the server side service to save data to the database
-            // table, we do not have to compute the id, as the server will assing it
-            const maxId = this.listEmployees.reduce(function (e1, e2) {
-                return (e1.id > e2.id) ? e1 : e2;
-            }).id;
-            employee.id = maxId + 1;
-
-            this.listEmployees.push(employee);
+            return this.httpClient.post<Employee>('http://localhost:3000/employees',
+            employee, {
+                headers: new HttpHeaders({
+                    'Content-Type': 'application/json'
+                })
+            })
+            .pipe(catchError(this.handleError));
         } else {
             const foundIndex = this.listEmployees.findIndex(e => e.id === employee.id);
             this.listEmployees[foundIndex] = employee;
