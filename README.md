@@ -89,3 +89,4 @@ return ErrorObservable.create('There is a problem with the service. We are notif
 68. [Part 68 - Angular httpclient post example](http://csharp-video-tutorials.blogspot.com/2018/07/angular-httpclient-post-example.html)
 69. [Part 69 - Angular httpclient put example](http://csharp-video-tutorials.blogspot.com/2018/07/angular-httpclient-put-example.html)
 70. [Part 70 - Angular httpclient delete example](http://csharp-video-tutorials.blogspot.com/2018/07/angular-httpclient-delete-example.html)
+71. [Part 71 - Angular CRUD course wrap up and what's next](http://csharp-video-tutorials.blogspot.com/2018/08/angular-crud-course-wrap-up-and-whats.html)
