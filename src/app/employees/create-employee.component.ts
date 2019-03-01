@@ -56,16 +56,25 @@ export class CreateEmployeeComponent implements OnInit {
   }
 
   saveEmployee(): void {
-    const newEmployee = Object.assign({}, this.employee);
-    this._employeeService.save(newEmployee).subscribe(
-      (data: Employee) => {
-        // log the employee object after the post is completed
-        console.log(data);
-        this.createEmployeeForm.reset();
-        this._router.navigate(['list']);
-      },
-      (error: any) => { console.log(error); }
-    );
+    if (this.employee.id == null) {
+      console.log(this.employee);
+      this._employeeService.addEmployee(this.employee).subscribe(
+        (data: Employee) => {
+          console.log(data);
+          this.createEmployeeForm.reset();
+          this._router.navigate(['list']);
+        },
+        (error: any) => { console.log(error); }
+      );
+    } else {
+      this._employeeService.updateEmployee(this.employee).subscribe(
+        () => {
+          this.createEmployeeForm.reset();
+          this._router.navigate(['list']);
+        },
+        (error: any) => { console.log(error); }
+      );
+    }
   }
 
   togglePhotoPreview() {
@@ -73,36 +82,19 @@ export class CreateEmployeeComponent implements OnInit {
   }
 
   private getEmployee(id: number) {
-    // If the id is 0, we want to create a new employee. So we intialise the employee 
-    // property with an Employee object with all properties set to null. The template 
-    // is bound to this employee property so all the form fields are displayed blank, 
-    // to enter details of a new employee we want to create
     if (id === 0) {
       this.employee = {
-        id: null,
-        name: null,
-        gender: null,
-        contactPreference: null,
-        phoneNumber: null,
-        email: '',
-        dateOfBirth: null,
-        department: '-101',
-        isActive: null,
-        photoPath: null,
-        password: null,
-        confirmPassword: null
+        id: null, name: null, gender: null, contactPreference: null,
+        phoneNumber: null, email: '', dateOfBirth: null, department: null,
+        isActive: null, photoPath: null
       };
-      // Resetting the form, resets any previous validation errors
       this.createEmployeeForm.reset();
       this.panelTitle = 'Create Employee';
     } else {
-      // If the Id is not 0, then retrieve the respective employee using the employee 
-      // service. Copy the values into a new object and assign that object as the value 
-      // for the employee property. Otherwise the employee property holds a reference 
-      // to the employee object in the array in the EmployeeService. This means any 
-      // changes we make on the form are automatically saved, without we explicitly
-      // saving by clicking the Save button.
-      this.employee = Object.assign({}, this._employeeService.getEmployee(id));
+      this._employeeService.getEmployee(id).subscribe(
+        (employee) => { this.employee = employee; },
+        (err: any) => console.log(err)
+      );
       this.panelTitle = 'Edit Employee';
     }
   }

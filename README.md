@@ -87,3 +87,4 @@ return ErrorObservable.create('There is a problem with the service. We are notif
 ```
 67. [Part 67 - Handling angular resolver errors](http://csharp-video-tutorials.blogspot.com/2018/07/handling-angular-resolver-errors.html)
 68. [Part 68 - Angular httpclient post example](http://csharp-video-tutorials.blogspot.com/2018/07/angular-httpclient-post-example.html)
+69. [Part 69 - Angular httpclient put example](http://csharp-video-tutorials.blogspot.com/2018/07/angular-httpclient-put-example.html)

@@ -15,6 +15,8 @@ import { ErrorObservable } from 'rxjs/observable/ErrorObservable';
 // to always use @Injectable() decorator to ensures consistency
 @Injectable()
 export class EmployeeService {
+    baseUrl = 'http://localhost:3000/employees';
+
     private listEmployees: Employee[];
 
     constructor(private httpClient: HttpClient) {
@@ -39,8 +41,9 @@ export class EmployeeService {
         }
     }
 
-    getEmployee(id: number): Employee {
-      return this.listEmployees.find(e => e.id === id);
+    getEmployee(id: number): Observable<Employee> {
+        return this.httpClient.get<Employee>(`${this.baseUrl}/${id}`)
+            .pipe(catchError(this.handleError));
     }
 
     deleteEmployee(id: number) {
@@ -48,6 +51,32 @@ export class EmployeeService {
         if (i !== -1) {
             this.listEmployees.splice(i, 1);
         }
+    }
+
+    // When an update is peformed our server side service does not return anything
+    // So we have set the return type to void.
+    updateEmployee(employee: Employee): Observable<void> {
+        // We are using the put() method to issue a PUT request
+        // We are using template literal syntax to build the url to which
+        // the request must be issued. To the base URL we are appending
+        // id of the employee we want to update. In addition to the URL,
+        // we also pass the updated employee object, and Content-Type header
+        // as parameters to the PUT method
+        return this.httpClient.put<void>(`${this.baseUrl}/${employee.id}`, employee, {
+            headers: new HttpHeaders({
+                'Content-Type': 'application/json'
+            })
+        })
+            .pipe(catchError(this.handleError));
+    }
+
+    addEmployee(employee: Employee): Observable<Employee> {
+        return this.httpClient.post<Employee>(this.baseUrl, employee, {
+            headers: new HttpHeaders({
+                'Content-Type': 'application/json'
+            })
+        })
+        .pipe(catchError(this.handleError));
     }
 
     private handleError(errorResponse: HttpErrorResponse) {

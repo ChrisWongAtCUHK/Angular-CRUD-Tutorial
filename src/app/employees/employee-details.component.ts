@@ -22,7 +22,10 @@ export class EmployeeDetailsComponent implements OnInit {
     // to the route parameter value changes
     this._route.paramMap.subscribe(params => {
       this._id = +params.get('id');
-      this.employee = this._employeeService.getEmployee(this._id);
+      this._employeeService.getEmployee(this._id).subscribe(
+        (employee) => this.employee = employee,
+        (err: any) => console.log(err)
+      );
     });
   }
 
